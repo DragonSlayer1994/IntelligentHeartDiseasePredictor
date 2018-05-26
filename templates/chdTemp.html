@@ -1,0 +1,83 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
+</head>
+<body>
+<h1 class="text-center">Coronary Heart Disease Prediction</h1>
+<div id="div1" class=" fmt container-fluid text-center">
+    <div class="col-lg-4 col-lg-offset-4">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <label>Age :</label><input type="number" name="age"><br><br>
+            <label>are you male or a female?</label>
+            <select class="text-center" id="sex" typeof="text" name="sex" style="width: 175px;">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select><br><br>
+            <label>what is your educational Qualification?</label>
+            <select class="text-center" id="education" typeof="text" name="education" style="width: 175px;">
+                <option value="0">A/L</option>
+                <option value="1">Diploma</option>
+                <option value="2">Vocational Training or HND</option>
+                <option value="3">Degree</option>
+            </select><br><br>
+            <label>are you a smoker?:</label>
+            <select class="text-center" typeof="text" name="currentSmoker" style="width: 175px;">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select><br><br>
+            <label>how many Cigarettes do you smoke per Day:</label><input type="text" name="cigsPerDay"><br><br>
+            <label>do you have Hypertension(high blood pressure):</label>
+            <select class="text-center" id="prevalentHyp" typeof="text" name="prevalentHyp" style="width: 175px;">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select><br><br>
+            <label>Are you consuming blood pressure medication? </label>
+            <select class="text-center" id="bpMeds" typeof="text" name="bpMeds" style="width: 175px;">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select><br><br>
+            <label>Did you Previously had a stroke?:</label>
+            <select class="text-center" id="ps" typeof="text" name="ps" style="width: 175px;">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select><br><br>
+
+            <label>Do you have diabetes</label>
+            <select class="text-center" id="diabetes" typeof="text" name="diabetes" style="width: 175px;">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select><br><br>
+            <label>your total cholesterol Level(mm/Hg):</label><input type="text" name="totChol"><br><br>
+            <label>your systolic blood pressure:</label><input type="text" name="sysBp"><br><br>
+            <label>your diastolic blood pressure:</label><input type="text" name="diaBp"><br><br>
+            <label>your body mass Index:</label><input type="text" name="BMI"><br><br>
+            <label>what is your Heart Rate:</label><input type="text" name="heartRate"><br><br>
+            <label>what is the glucose level of you blood(mm/Hg):</label><input type="text" name="glucose"><br><br>
+
+            <input class="btn btnCal" role="button" type="submit" value="Calculate">
+
+        </form>
+        <br><br>
+        <div>
+
+             <font size="2">
+                <p style="color: #d44179;">System Will predict whether you will get a Coronary heart disease within next 10 years, according tp provided data.</p>
+            </font>
+
+            <font size="4">
+                <p style="color:blue;">In order to use coronary heart disease Prediction, you need to have Fasting blood
+                    test results and blood pressure
+                    readings </p>
+            </font>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

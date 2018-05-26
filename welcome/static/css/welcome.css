@@ -1,0 +1,105 @@
+body{
+    background-image: url("images/wall.jpg");
+}
+h1{
+    padding-top: 30px;
+    font-family: Impact, Charcoal, sans-serif;
+    color: #6851ff;
+    font-size: 50px;
+}
+.fmt {
+    margin-top: 75px;
+}
+
+#div1 {
+    padding-top:50px;
+    padding-bottom: 30px;
+    background: rgba(192, 192, 192, 0.6);
+
+}
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,600italic,700italic);
+
+*{margin: 0px; padding: 0px}
+.panel1{
+    background-color: #27ae60;
+}
+
+.btn1{
+    text-align: center;
+    cursor: pointer;
+    color: ghostwhite;
+    font-size: 20px;
+    padding:10px 10px ;
+    outline: none;
+    background-color: #27ae60;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 9px #95a5a6;
+}
+.btn1:hover{
+  background-color: #2ecc71;
+}
+
+.btn1:active {
+  background-color: #2ecc71;
+  box-shadow: 0 5px #95a5a6;
+  transform: translateY(4px);
+}
+.btnSign{
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    padding:10px 30px ;
+    outline: none;
+    background-color: dodgerblue;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 9px #95a5a6;
+    color:ghostwhite ;
+
+}
+.btnSign:hover{
+  background-color:	#00bfff;
+}
+
+.btnSign:active {
+  background-color: #00bfff;
+  box-shadow: 0 5px #95a5a6;
+  transform: translateY(4px);
+}
+
+
+.btnCal{
+    text-align: center;
+    cursor: pointer;
+    font-size: 20px;
+    padding:10px 30px ;
+    outline: none;
+    background-color: #ffb51d;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 9px #95a5a6;
+    color:ghostwhite ;
+
+}
+.btnCal:hover{
+  background-color: #f3ff1c ;
+}
+
+.btnCal:active {
+  background-color: #f3ff1c;
+  box-shadow: 0 5px #95a5a6;
+  transform: translateY(4px);
+}
+
+
+
+label {
+  display: inline-block;
+  width: 220px;
+  text-align: left;
+}​
+#sex{
+    width: 600px;
+ }

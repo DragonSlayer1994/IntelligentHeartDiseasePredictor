@@ -1,0 +1,38 @@
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
+
+    <title>Intelligent Heart Disease Predictor</title>
+</head>
+<body>
+<h1 class="text-center"> Results </h1>
+<div id="div1" class="fmt container-fluid text-center">
+
+    {% for allUsers  in allUsers %}
+        {% if allUsers == 1 %}
+            <p>You have risk Towards Heart Disease Please Channel a Heart Disease Expert as soon as
+                possible </p>
+
+        {% else %}
+            <p>You have no risk towards heart diseases. </p>
+
+        {% endif %}
+
+    {% endfor %}
+    {% for accuracy  in accuracy %}
+
+        <p>According to the system prediction is {{accuracy}}% accurate</p>
+
+
+    {% endfor %}
+
+
+</div>
+</body>
+</html>

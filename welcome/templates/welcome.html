@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+          integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
+
+    <title>Intelligent Heart Disease Predictor</title>
+
+
+</head>
+<body>
+<h1 class="text-center">Intelligent Heart Disease Predictor</h1>
+<div id="div1" class="fmt container-fluid text-center">
+    <div class="col-lg-4 col-lg-offset-4">
+
+
+
+        <a class="btn btn1" role="button" href="{% url 'CHDPrediction' %}">Coronary Heart Disease Prediction
+            </a>
+
+        <br><br><br>
+        <a role="button" class="btn btn1" href="{% url 'hdPrediction' %}"> Heart Disease Prediction </a><br>
+        <br><br>
+        <a class="btn btnSign" role="button" href="{% url 'login' %}"> Login</a>
+    </div>
+</div>
+
+</body>
+</html>

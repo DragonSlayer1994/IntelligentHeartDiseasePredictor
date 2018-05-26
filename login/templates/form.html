@@ -1,0 +1,93 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static 'css/welcome.css' %}">
+
+    <title>Intelligent Heart Disease Predictor</title>
+</head>
+<body>
+
+<h1 class="text-center"> heart disease prediction</h1>
+<div id="div1" class=" fmt container-fluid text-center">
+    <div class="col-lg-4 col-lg-offset-4">
+
+        <form action="{% url 'hdPrediction' %}" method="post">
+            {% csrf_token %}
+            <label>Age :</label>
+            <input type="number" name="age"><br><br>
+            <label>Sex:</label>
+            <select class="text-center" id="sex" typeof="text" name="sex" style="width: 175px;">
+                <option value="0">Female</option>
+                <option value="1">Male</option>
+            </select><br><br>
+            <label>Chest Pain Type :</label>
+            <select class="text-center" id="cp" typeof="text" name="cp" style="width: 175px;">
+                <option value="1">typical angina</option>
+                <option value="2">atypical angina</option>
+                <option value="3">non-anginal pain</option>
+                <option value="3">no heart chest pain</option>
+            </select><br><br>
+            <label>Resting blood pressure (mm/Hg):</label>
+            <input type="text" name="trestbps"><br><br>
+            <label>Blood cholesterol(mm/Hg):</label>
+            <input type="text" name="chol"><br><br>
+            <label> is fasting blood sugar greater than 120mm/Hg:</label>
+            <select class="text-center" id="fbs" typeof="text" name="fbs" style="width: 175px;">
+                <option value="0">False</option>
+                <option value="1">True</option>
+            </select><br><br>
+            <label>resting electrocardiograph's results:</label>
+            <select class="text-center" id="restecg" typeof="text" name="restecg" style="width: 175px;">
+                <option value="0">normal</option>
+                <option value="1">having ST-T wave abnormality(T>0.05W)</option>
+                <option value="2">left ventricular hypertrophy>0.1W</option>
+            </select><br><br>
+            <label>Maximum heart Rate achieved in test:</label>
+            <input type="text" name="thalach"><br><br>
+            <label>does report say you have exercise induced angina? :</label>
+            <select class="text-center" id="exang" typeof="text" name="exang" style="width: 175px;">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select><br><br>
+            <label>what is your ST depression induced by exercise relative to rest:</label>
+            <input type="text" name="oldpeak"><br><br>
+            <label>what is slope of the peak exercise ST segment?</label>
+            <select class="text-center" id="slope" typeof="text" name="slope" style="width: 175px;">
+                <option value="1">upsloping</option>
+                <option value="2">flat</option>
+                <option value="3">downsloping</option>
+            </select><br><br>
+            <label>number of major vessels colored in your ECG report</label>
+            <select class="text-center" id="ca" typeof="text" name="ca" style="width: 175px;">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select><br><br>
+            <label>status of your Thalassemia according to report?</label>
+            <select class="text-center" id="thal" typeof="text" name="thal" style="width: 175px;">
+                <option value="3">normal</option>
+                <option value="6">fixed Defect</option>
+                <option value="7">reversible defect</option>
+            </select><br><br>
+
+            <input role="button" class="btn btnCal" type="submit" value="Calcucate"><br><br>
+
+        </form>
+        <div>
+            <font size="2">
+                <p style="color: #d44179;">System Will predict availability of heart hear disease according to provided data</p>
+            </font>
+            <br>
+            <font size="4">
+                <p style="color:blue;">In order to get heart disease Prediction, you need to have Fasting blood
+                    test results,blood pressure test results and Electrocardiogram(ECG) test results.
+                    readings </p>
+            </font>
+        </div>
+    </div>
+</div>
+</body>
+</html>
